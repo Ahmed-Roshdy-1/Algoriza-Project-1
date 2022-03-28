@@ -74,6 +74,9 @@ body {
 .fa-star {
   color: #ffa500;
 }
+.star-none-active {
+  color: var(--gray);
+}
 .right-side i {
   font-size: 2.5rem;
   margin-right: 1.5rem;
@@ -174,3 +177,125 @@ body {
   }
 }
 /*     ------------ end of navbar style ------------------- */
+
+/* app Content ----------------------------------------------------------------------- */
+.app-content {
+  /* background-color: #28c76f; */
+  margin: 8rem 0;
+  width: 100%;
+}
+
+.content-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.content-header * {
+  margin-left: 1.5rem;
+}
+.content-header h2 {
+  padding-right: 1rem;
+  font-weight: 500;
+  color: #636363;
+  border-right: 0.5px solid #7267f04f;
+}
+
+.content-header svg {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.content-header h5 {
+  font-weight: 400;
+  color: var(--primary);
+  font-size: 1.8rem;
+}
+
+.all-content {
+  width: 98%;
+  height: 100%;
+  display: flex;
+  margin-top: 3rem;
+}
+
+.left-content {
+  width: 20vw;
+  margin-bottom: 2rem;
+}
+.left-content p {
+  margin: 0 1.3rem 1rem;
+  font-size: 1.5rem;
+}
+/* list style------ */
+.list-content {
+  background-color: var(--white);
+  margin: 1rem 2rem 5rem 0;
+  padding: 1rem 0rem 0 2rem;
+  border-radius: 0.5rem;
+}
+.list-content * {
+  margin-bottom: 1rem;
+}
+.list-content .filter-title {
+  font-weight: 500;
+  color: #5e5873;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem !important;
+}
+
+.reange .filter-title {
+  font-weight: 500;
+  color: #5e5873;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.list-content .custom-control {
+  font-size: 1.5rem;
+}
+.list-content .custom-control .right-content {
+  width: 80vw;
+  height: 100%;
+  background-color: #5457ea;
+}
+
+.reange-bar {
+  padding-bottom: 1.5rem;
+  position: relative;
+  cursor: pointer;
+}
+.reange-bar .s1 {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  top: -0.5rem;
+  border: 2px solid var(--primary);
+}
+.reange .s2 {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--white);
+  border-radius: 50%;
+  right: 2rem;
+  bottom: 1rem;
+  border: 2px solid var(--primary);
+}
+.reange-bar div {
+  width: 90%;
+  height: 0.5rem;
+  background-color: var(--primary);
+}
+
+.custom-control span {
+  margin-left: 1rem;
+}
+
+span.left {
+  margin-left: 8rem;
+}
+
+/* End app Content ----------------------------------------------------------------------- */
