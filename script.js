@@ -6,7 +6,7 @@ const searchForProuduct = document.querySelector(".search-product");
 function createCard(img, rating, price, productName, description) {
   let x = rating;
   var ratingMarkUP;
-
+  //   to handle the rating Problem-------------------------------------
   if (x == 0) {
     ratingMarkUP = `
     <i class="fa-regular fa-star star-none-active"></i>
@@ -56,6 +56,7 @@ function createCard(img, rating, price, productName, description) {
     <i class="fa-solid fa-star"></i>
     `;
   }
+  //   to handle the rating Problem -----------------------
 
   let code = `<div class="card">
   <div class="card-content">
@@ -88,7 +89,8 @@ for (let i = 0; i < data.products.length; i++) {
     data.products[i].discription
   );
 }
-// I have a problem in filtering Product i cant delete the actoul product
+// I have a problem with filtering Products(in searching for products) I can't delete the actual products In the Dom
+// that I created to display the filtering Products.
 searchForProuduct.addEventListener("keyup", (e) => {
   const searchInput = e.target.value;
   const filterProduct = data.products.filter((product) => {
