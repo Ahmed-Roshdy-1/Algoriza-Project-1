@@ -383,6 +383,7 @@ span.left {
   width: 90%;
   border-radius: 1rem;
   box-shadow: 0.5rem 1rem 2rem #02020227; /*     ------------ box shdow to using it some where else ------------------- */
+  transition: all 0.5s ease;
 }
 .card-content {
   width: 100%;
@@ -391,7 +392,7 @@ span.left {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   cursor: pointer;
-  transition: all 0.5s;
+
   /* position: relative; */
 }
 .card:hover {
@@ -408,6 +409,12 @@ span.left {
   margin-top: 1rem;
   font-weight: 600;
   color: #6e6b7b;
+
+  width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
 }
 .product-name:hover {
   color: var(--primary);
