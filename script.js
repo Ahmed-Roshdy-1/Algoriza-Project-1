@@ -89,14 +89,14 @@ for (let i = 0; i < data.products.length; i++) {
     data.products[i].discription
   );
 }
-// I have a problem with filtering Products(in searching for products) I can't delete the actual products In the Dom
-// that I created to display the filtering Products.
-searchForProuduct.addEventListener("keyup", (e) => {
-  const searchInput = e.target.value;
-  const filterProduct = data.products.filter((product) => {
-    return product.name.includes(searchInput);
-  });
 
+//I created this Event  to display the filtering Products.
+searchForProuduct.addEventListener("keyup", (e) => {
+  const searchInput = e.target.value.toLowerCase();
+  const filterProduct = data.products.filter((product) => {
+    return product.name.toLowerCase().includes(searchInput); //Check for name project
+  });
+  products.innerHTML = ``; //to delete data in dow and display the new one
   for (let i = 0; i < filterProduct.length; i++) {
     createCard(
       filterProduct[i].img,
@@ -105,5 +105,18 @@ searchForProuduct.addEventListener("keyup", (e) => {
       filterProduct[i].name,
       filterProduct[i].discription
     );
+  }
+  if (searchInput == "") {
+    products.innerHTML = ``; //to delete data in dow and display the new one
+    // call the function to get the product Data
+    for (let i = 0; i < data.products.length; i++) {
+      createCard(
+        data.products[i].img,
+        data.products[i].rating,
+        data.products[i].price,
+        data.products[i].name,
+        data.products[i].discription
+      );
+    }
   }
 });
